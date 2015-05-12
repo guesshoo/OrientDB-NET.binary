@@ -23,8 +23,8 @@ namespace Orient.Tests
 
             _process.StartInfo.FileName = path;
             _process.StartInfo.UseShellExecute = false;
-            _process.StartInfo.EnvironmentVariables.Add("ORIENTDB_HOME", dbDir);
-            _process.StartInfo.EnvironmentVariables.Add("JAVA_HOME", javaDir);
+            _process.StartInfo.EnvironmentVariables["ORIENTDB_HOME"] = dbDir;
+            _process.StartInfo.EnvironmentVariables["JAVA_HOME"] = javaDir;
             _process.StartInfo.WorkingDirectory = dbDir;
             //_process.StartInfo.RedirectStandardError = true;
             //_process.StartInfo.RedirectStandardOutput = true;

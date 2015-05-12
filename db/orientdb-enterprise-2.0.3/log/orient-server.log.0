@@ -1,0 +1,72 @@
+
+2015-04-13 13:33:54:577 INFO  OrientDB auto-config DISKCACHE=13,820MB (heap=455MB os=16,323MB disk=313,885MB) [orientechnologies]
+2015-04-13 13:33:54:581 INFO  Loading configuration from: c:/DevTools/orientdb-enterprise-2.0.3/config/orientdb-server-config.xml... [OServerConfigurationLoaderXml]
+2015-04-13 13:33:54:718 INFO  OrientDB Server v2.0.3 (build UNKNOWN@r${buildNumber}; 2015-02-19 23:40:05+0000) is starting up... [OServer]
+2015-04-13 13:33:54:734 INFO  Databases directory: c:\DevTools\orientdb-enterprise-2.0.3\databases [OServer]
+2015-04-13 13:33:54:762 INFO  Listening binary connections on 0.0.0.0:2424 (protocol v.28, socket=default) [OServerNetworkListener]
+2015-04-13 13:33:54:765 INFO  Listening http connections on 0.0.0.0:2480 (protocol v.10, socket=default) [OServerNetworkListener]
+2015-04-13 13:33:54:779 INFO  Installing dynamic plugin 'agent-2.0.3.jar'... [OServerPluginManager]
+2015-04-13 13:33:54:831 INFO  Profiler is recording metrics with configuration: 60,24 [OEnterpriseProfiler]
+2015-04-13 13:33:54:847 INFO  Installing dynamic plugin 'orientdb-lucene-2.0.3-dist.jar'... [OServerPluginManager]
+2015-04-13 13:33:54:884 INFO  Lucene index plugin installed and active. Lucene version: LUCENE_47 [OLuceneIndexPlugin]
+2015-04-13 13:33:54:886 INFO  Installing dynamic plugin 'studio-2.0.zip'... [OServerPluginManager]
+2015-04-13 13:33:54:897 INFO  Installing GREMLIN language v.2.6.0 - graph.pool.max=50 [OGraphServerHandler]
+2015-04-13 13:33:54:898 INFO  [OVariableParser.resolveVariables] Error on resolving property: distributed [orientechnologies]
+2015-04-13 13:33:54:899 INFO  Installing Script interpreter. WARN: authenticated clients can execute any kind of code into the server by using the following allowed languages: [sql] [OServerSideScriptInterpreter]
+2015-04-13 13:34:04:547 INFO  OrientDB Server v2.0.3 is active. [OServer]
+2015-04-13 13:34:24:210 INFO  Creating database plocal:c:/DevTools/orientdb-enterprise-2.0.3/databases/Demo [OServerCommandPostDatabase]
+2015-04-13 13:35:14:414 SEVERE Internal server error:
+com.orientechnologies.orient.core.command.OCommandExecutorNotFoundException: Cannot find a command executor for the command request: sql.Create Persons extends V [ONetworkProtocolHttpDb]
+2015-04-13 13:35:44:427 SEVERE Internal server error:
+com.orientechnologies.orient.core.exception.OSchemaException: Class Person already exists in current database [ONetworkProtocolHttpDb]Sent run-time exception to the client /127.0.0.1:22561: com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+	at com.orientechnologies.orient.server.OServer.serverLogin(OServer.java:446)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.connect(ONetworkProtocolBinary.java:692)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:274)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:220)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:22561: com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+	at com.orientechnologies.orient.server.OServer.serverLogin(OServer.java:446)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.connect(ONetworkProtocolBinary.java:692)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:274)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:220)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+Sent run-time exception to the client /127.0.0.1:22561: com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+com.orientechnologies.orient.core.exception.OSecurityAccessException: Wrong user/password to [connect] to the remote OrientDB Server instance. Get the user/password from the config/orientdb-server-config.xml file
+	at com.orientechnologies.orient.server.OServer.serverLogin(OServer.java:446)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.connect(ONetworkProtocolBinary.java:692)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary.executeRequest(ONetworkProtocolBinary.java:274)
+	at com.orientechnologies.orient.server.network.protocol.binary.OBinaryNetworkProtocolAbstract.execute(OBinaryNetworkProtocolAbstract.java:220)
+	at com.orientechnologies.common.thread.OSoftThread.run(OSoftThread.java:69)
+
+2015-04-13 13:47:43:222 SEVERE Internal server error:
+com.orientechnologies.orient.core.command.OCommandExecutorNotFoundException: Cannot find a command executor for the command request: sql.inserts into Person (firstName, lastName) values ('Gary', 'White'), ('John', 'Doe') [ONetworkProtocolHttpDb]
+2015-04-13 13:51:13:557 SEVERE Internal server error:
+com.orientechnologies.orient.core.exception.OCommandExecutionException: 'DROP CLASS' command cannot drop class 'Company' because contains Vertices. Use 'DELETE VERTEX' command first to avoid broken edges in database, or apply the 'UNSAFE' keyword to force it [ONetworkProtocolHttpDb]
+2015-04-13 17:15:04:810 INFO  Received shutdown command from the remote client /169.186.101.78:54545 [ONetworkProtocolBinary]
+2015-04-13 17:15:04:810 INFO  Remote client /169.186.101.78:54545 authenticated. Starting shutdown of server... [ONetworkProtocolBinary]
+2015-04-13 17:15:04:811 INFO  OrientDB Server is shutting down... [OServer]
+2015-04-13 17:15:04:811 INFO  Shutting down listeners: [OServer]
+2015-04-13 17:15:04:811 INFO  - ONetworkProtocolBinary /0.0.0.0:2424: [OServer]
+2015-04-13 17:15:04:812 INFO  - ONetworkProtocolHttpDb /0.0.0.0:2480: [OServer]
+2015-04-13 17:15:04:812 INFO  Shutting down protocols [OServer]
+2015-04-13 17:15:04:812 INFO  Shutting down plugins: [OServerPluginManager]
+2015-04-13 17:15:04:813 INFO  - studio [OServerPluginManager]
+2015-04-13 17:15:04:813 INFO  - enterprise-agent [OServerPluginManager]Error during server plugin com.orientechnologies.orient.server.plugin.OServerPluginInfo@53687596 shutdown.
+java.lang.ClassCastException: com.orientechnologies.agent.profiler.OEnterpriseProfiler cannot be cast to com.orientechnologies.common.profiler.OProfiler
+	at com.orientechnologies.agent.OEnterpriseAgent.uninstallProfiler(OEnterpriseAgent.java:162)
+	at com.orientechnologies.agent.OEnterpriseAgent.shutdown(OEnterpriseAgent.java:120)
+	at com.orientechnologies.orient.server.plugin.OServerPluginAbstract.sendShutdown(OServerPluginAbstract.java:43)
+	at com.orientechnologies.orient.server.plugin.OServerPluginInfo.shutdown(OServerPluginInfo.java:64)
+	at com.orientechnologies.orient.server.plugin.OServerPluginManager.shutdown(OServerPluginManager.java:149)
+	at com.orientechnologies.orient.server.OServer.shutdown(OServer.java:350)
+	at com.orientechnologies.orient.server.network.protocol.binary.ONetworkProtocolBinary$2.run(ONetworkProtocolBinary.java:1767)
+
+2015-04-13 17:15:04:814 INFO  - script-interpreter [OServerPluginManager]
+2015-04-13 17:15:04:815 INFO  - graph [OServerPluginManager]
+2015-04-13 17:15:04:815 INFO  - lucene-index [OServerPluginManager]
+2015-04-13 17:15:04:815 INFO  Shutting down databases: [OServer]
+2015-04-13 17:15:04:816 INFO  - closing storage: Demo... [Orient]
+2015-04-13 17:15:05:009 INFO  OrientDB Engine shutdown complete [Orient]
+2015-04-13 17:15:05:009 INFO  OrientDB Server shutdown complete [OServer]
